@@ -33,4 +33,13 @@ function convert(num::Int)
 	end
 end
 
+function convert(num::Float64)
+	num = Int(round(num))
+	if num < 0 | num > 19
+		return "0-19 please"
+	else
+		return get(convtable, num, "wrong for some other reason")
+	end
+end
+
 end # module
