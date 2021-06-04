@@ -18,7 +18,7 @@ mn.convert(13)
 
 Note that by default there is a single trailing space in the returned string as to avoid overlaps. This can be changed by specifiing the `trailingspaces` argument in `convert()`.
 
-##Why?
+## Why?
 
 Because it's cute.
 

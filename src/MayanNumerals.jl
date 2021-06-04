@@ -25,19 +25,22 @@ convtable = Dict([
 									(19,"\U1D2F3")
 									])
 
-function convert(num::Integer, trailingstring=" ")
+function convert(num::Integer; trailingstring::String=" ", blankzeros::Bool=false)
 	if num < 0 || num > 19
 		return "0-19 please"
+	elseif blankzeros && num==0
+		return " " * trailingstring
 	else
 		return get(convtable, num, "wrong for some other reason") * trailingstring
 	end
 end
 
-function convert(num::AbstractFloat, trailingstring=" ")
+function convert(num::AbstractFloat; trailingstring::String=" ", blankzeros::Bool=false)
 	num = Int(round(num))
-	println(num)
 	if num < 0 || num > 19
 		return "0-19 please"
+	elseif blankzeros && num==0
+		return " " * trailingstring
 	else
 		return get(convtable, num, "wrong for some other reason") * trailingstring
 	end
