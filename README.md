@@ -1,13 +1,13 @@
 Convert numbers 0-19 to Unicode [Mayan numerals](https://en.wikipedia.org/wiki/Maya_numerals). 
 
-##Installation
+## Installation
 
 ```julia
 using Pkg
 Pkg.add("https://github.com/ak202/MayanNumerals.jl.git")
 ```
 
-##Usage
+## Usage
 ```julia
 using MayanNumerals
 mn = MayanNumerals
